@@ -23,3 +23,11 @@
 		}
 	}
 }
+
+.wp-block-bouquet-of-roses-split-feature {
+	.split-feature-container.right {
+		.inner-container {
+			flex-flow: row-reverse wrap;
+		}
+	}
+}

@@ -26,4 +26,5 @@ define( 'WHITE_ROSES_PLUGINS_PATH', plugin_dir_path( __FILE__) );
 add_action( 'init', 'bouquet_init_blocks' );
 function bouquet_init_blocks() {
 	register_block_type( WHITE_ROSES_PLUGINS_PATH . 'build/blocks/split-feature' );
+	// register_block_type( WHITE_ROSES_PLUGINS_PATH . 'build/blocks/split-text-callout' );
 }

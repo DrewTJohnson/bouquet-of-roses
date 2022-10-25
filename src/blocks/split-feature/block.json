@@ -4,8 +4,8 @@
 	"name": "bouquet-of-roses/split-feature",
 	"version": "0.1.0",
 	"title": "Split Feature",
-	"category": "widgets",
-	"icon": "smiley",
+	"category": "layout",
+	"icon": "columns",
 	"description": "Example block scaffolded with Create Block tool.",
 	"supports": {
 		"html": false

@@ -22,3 +22,7 @@
 .split-feature-container .inner-container .text-container {
   flex: 1 0 45%;
 }
+
+.wp-block-bouquet-of-roses-split-feature .split-feature-container.right .inner-container {
+  flex-flow: row-reverse wrap;
+}

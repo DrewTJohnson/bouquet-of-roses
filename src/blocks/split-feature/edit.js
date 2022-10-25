@@ -107,7 +107,6 @@ export default function Edit(props) {
 					</PanelBody>
 				</Panel>
 			</InspectorControls>
-			{alignment === 'left' ? (
 			<div className={"split-feature-container " + alignment}>
 				<div className="inner-container">
 					<div className="media-container">
@@ -137,37 +136,6 @@ export default function Edit(props) {
 					</div>
 				</div>
 			</div>
-			) : (
-			<div className={"split-feature-container " + alignment}>
-				<div className="inner-container">
-					<div className="text-container">
-						<RichText
-							{...blockProps}
-							className="title"
-							tagName="h2"
-							value={title}
-							allowedFormats={ ['core/bold', 'core/italic' ] }
-							onChange={(heading) => {props.setAttributes({ title: heading })}}
-							placeholder={__("Title...")}
-							keepPlaceholderOnFocus={true}
-						/>
-						<RichText
-							{...blockProps}
-							className="paragraph"
-							tagName="p"
-							value={paragraph}
-							allowedFormats={ ['core/bold', 'core/italic' ] }
-							onChange={(text) => {props.setAttributes({ paragraph: text })}}
-							placeholder={__("Lorem Ipsum...")}
-							keepPlaceholderOnFocus={true}
-						/>
-					</div>
-					<div className="media-container">
-						<img className="media" src={media.url} width={media.width} height={media.height} alt={media.alt} />	
-					</div>
-				</div>
-			</div>
-			)}
 		</div>
 	);
 }
