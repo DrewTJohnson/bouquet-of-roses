@@ -6,7 +6,7 @@
 	"title": "Split Feature",
 	"category": "layout",
 	"icon": "columns",
-	"description": "Example block scaffolded with Create Block tool.",
+	"description": "Block with media on one column and text in the other.",
 	"supports": {
 		"html": false
 	},
