@@ -27,4 +27,5 @@ add_action( 'init', 'bouquet_init_blocks' );
 function bouquet_init_blocks() {
 	register_block_type( WHITE_ROSES_PLUGINS_PATH . 'build/blocks/split-feature' );
 	register_block_type( WHITE_ROSES_PLUGINS_PATH . 'build/blocks/split-text' );
+	register_block_type( WHITE_ROSES_PLUGINS_PATH . 'build/blocks/card-item' );
 }

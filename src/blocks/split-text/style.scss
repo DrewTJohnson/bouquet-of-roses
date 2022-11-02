@@ -5,12 +5,3 @@
  * Replace them with your own styles or remove the file completely.
  */
 
- .split-text-container {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-around;
-	align-items: center;
-	.text-container {
-		flex: 1 0 50%;
-	}
- }

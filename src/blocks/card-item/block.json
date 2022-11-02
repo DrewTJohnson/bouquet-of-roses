@@ -1,0 +1,51 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "create-block/card-item",
+	"version": "0.1.0",
+	"title": "Card Item",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "Example block scaffolded with Create Block tool.",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"title": {
+			"type": "string"
+		},
+		"icon": {
+			"type": "object",
+			"default": {
+				"id": 0,
+				"url": "",
+				"height": 0,
+				"width": 0,
+				"alt": ""
+			}
+		},
+		"media": {
+			"type": "object",
+			"default": {
+				"id": 0,
+				"url": "",
+				"height": 0,
+				"width": 0,
+				"alt": ""
+			}
+		},
+		"linkUrl": {
+			"type": "string"
+		},
+		"linkTitle": {
+			"type": "string"
+		},
+		"linkTarget": {
+			"type": "boolean"
+		}
+	},
+	"textdomain": "card-item",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

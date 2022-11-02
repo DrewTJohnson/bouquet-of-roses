@@ -4,7 +4,7 @@
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps, RichText } from '@wordpress/block-editor';
+import { useBlockProps, RichText, InnerBlocks } from '@wordpress/block-editor';
 
 /**
  * The save function defines the way in which the different attributes should
@@ -22,34 +22,7 @@ export default function save(props) {
 	return (
 		<div { ...useBlockProps.save() }>
 			<div className="split-text-container">
-				<div className="text-container">
-					<RichText.Content
-						{...blockProps}
-						className="title"
-						tagName="h2"
-						value={leftTitle}
-					/>
-					<RichText.Content
-						{...blockProps}
-						className="paragraph"
-						tagName="p"
-						value={leftParagraph}
-					/>
-				</div>
-				<div className="text-container">
-					<RichText.Content
-						{...blockProps}
-						className="title"
-						tagName="h2"
-						value={rightTitle}
-					/>
-					<RichText.Content
-						{...blockProps}
-						className="paragraph"
-						tagName="p"
-						value={rightParagraph}
-					/>
-				</div>
+				<InnerBlocks.Content />
 			</div>
 		</div>
 	);

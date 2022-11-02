@@ -13,7 +13,7 @@ import { __ } from '@wordpress/i18n';
  */
 import { 
 	useBlockProps,
-	RichText
+	InnerBlocks
  } from '@wordpress/block-editor';
 
 /**
@@ -34,55 +34,13 @@ import './editor.scss';
  */
 export default function Edit(props) {
 	const blockProps = useBlockProps();
-	const { leftTitle, rightTitle, leftParagraph, rightParagraph } = props.attributes;
 
 	return (
 		<div { ...blockProps }>
 			<div className="split-text-container">
-				<div class="text-container">
-					<RichText
-						{...blockProps}
-						className="title"
-						tagName="h2"
-						value={leftTitle}
-						allowedFormats={ ['core/bold', 'core/italic' ] }
-						onChange={(heading) => {props.setAttributes({ leftTitle: heading })}}
-						placeholder={__("Title...")}
-						keepPlaceholderOnFocus={true}
-					/>
-					<RichText
-						{...blockProps}
-						className="paragraph"
-						tagName="p"
-						value={leftParagraph}
-						allowedFormats={ ['core/bold', 'core/italic' ] }
-						onChange={(text) => {props.setAttributes({ leftParagraph: text })}}
-						placeholder={__("Lorem Ipsum...")}
-						keepPlaceholderOnFocus={true}
-					/>
-				</div>
-				<div className="text-container">
-					<RichText
-						{...blockProps}
-						className="title"
-						tagName="h2"
-						value={rightTitle}
-						allowedFormats={ ['core/bold', 'core/italic' ] }
-						onChange={(heading) => {props.setAttributes({ rightTitle: heading })}}
-						placeholder={__("Title...")}
-						keepPlaceholderOnFocus={true}
-					/>
-					<RichText
-						{...blockProps}
-						className="paragraph"
-						tagName="p"
-						value={rightParagraph}
-						allowedFormats={ ['core/bold', 'core/italic' ] }
-						onChange={(text) => {props.setAttributes({ rightParagraph: text })}}
-						placeholder={__("Lorem Ipsum...")}
-						keepPlaceholderOnFocus={true}
-					/>
-				</div>
+				<InnerBlocks
+					allowedBlocks={[ 'core/columns'] }
+				/>
 			</div>
 		</div>
 	);
