@@ -121,17 +121,22 @@ export default function Edit(props) {
 				</PanelBody>
 			</Panel>
 			</InspectorControls>
-			<div className='card-item'>
-			<RichText
-				{...useBlockProps()}
-				className="title"
-				tagName="h2"
-				value={title}
-				allowedFormats={ ['core/bold', 'core/italic' ] }
-				onChange={(heading) => {props.setAttributes({ title: heading })}}
-				placeholder={__("Title...")}
-				keepPlaceholderOnFocus={true}
-			/>
+			<div className='card'>
+				<div className='card-intro'>
+				<RichText
+					{...useBlockProps()}
+					className="title"
+					tagName="h2"
+					value={title}
+					allowedFormats={ ['core/bold', 'core/italic' ] }
+					onChange={(heading) => {props.setAttributes({ title: heading })}}
+					placeholder={__("Title...")}
+					keepPlaceholderOnFocus={true}
+				/>
+				<div className="icon">
+					<img src={icon.url} width={icon.width} height={icon.height} alt={icon.alt} />
+				</div>
+			</div>
 			<InnerBlocks 
 				allowedBlocks={['core/image']}
 			/>

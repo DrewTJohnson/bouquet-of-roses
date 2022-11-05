@@ -17,6 +17,7 @@
   justify-content: space-between;
 }
 .card .card-intro h2 {
+  color: #fff;
   font-size: 1rem;
 }
 .card .card-intro .icon {

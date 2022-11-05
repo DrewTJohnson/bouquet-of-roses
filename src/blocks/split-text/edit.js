@@ -39,7 +39,7 @@ export default function Edit(props) {
 		<div { ...blockProps }>
 			<div className="split-text-container">
 				<InnerBlocks
-					allowedBlocks={[ 'core/columns'] }
+					allowedBlocks={[ 'core/columns','core/column' ] }
 				/>
 			</div>
 		</div>

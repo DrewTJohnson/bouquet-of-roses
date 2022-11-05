@@ -1,0 +1,43 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-create-block-card-item {
+  border: none;
+}
+.wp-block-create-block-card-item .card-item {
+  border-radius: 25px;
+  margin: 2rem 1rem;
+  padding: 1rem 1.5rem;
+  position: relative;
+  background-color: #466289;
+}
+.wp-block-create-block-card-item .card-item .card-intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.wp-block-create-block-card-item .card-item .card-intro h2 {
+  font-size: 1rem;
+}
+.wp-block-create-block-card-item .card-item .card-intro .icon {
+  width: 35px;
+  height: 35px;
+}
+.wp-block-create-block-card-item .card-item .card-intro .icon img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.2s ease-in-out;
+}
+.wp-block-create-block-card-item .card-item a {
+  color: #fff;
+}
+.wp-block-create-block-card-item .card-item a:hover {
+  text-decoration: none;
+}
+.wp-block-create-block-card-item .card-item a:hover .card-intro .icon img {
+  animation: shake 0.5s;
+  animation-iteration-count: 1;
+}
