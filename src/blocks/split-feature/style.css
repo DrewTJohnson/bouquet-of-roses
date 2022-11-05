@@ -18,6 +18,8 @@
 }
 .split-feature-container .inner-container .media-container .media {
   object-fit: contain;
+  width: 100%;
+  height: auto;
 }
 .split-feature-container .inner-container .text-container {
   flex: 1 0 45%;
